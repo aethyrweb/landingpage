@@ -11,6 +11,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.gallery-container {
+				position: relative;
+				max-width: 80%;
+				margin: auto;
+				overflow: hidden;
+			}
+			.gallery {
+				display: flex;
+				transition: transform 0.5s ease-in-out;
+				white-space: nowrap;
+			}
+			.gallery img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				margin: 0 10px;
+			}
+			.gallery-button {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+				border-radius: 50%;
+			}
+			.gallery-button.left {
+				left: 10px;
+			}
+			.gallery-button.right {
+				right: 10px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -35,6 +71,33 @@
 						</ul>
 					</nav>
 
+					            <!-- Scrolling Image Gallery -->
+								<section id="gallery-section" class="main">
+									<h2>Gallery</h2>
+									<div class="gallery-container">
+										<button class="gallery-button left" onclick="scrollGallery(-1)">&#10094;</button>
+										<div class="gallery" id="imageGallery">
+											<img src="headshot.JPG" alt="Gallery Image 1">
+											<img src="crowncastleinternshipimage.jpg" alt="Gallery Image 2">
+											<img src="pic01.jpg" alt="Gallery Image 3">
+											<img src="pic03.jpg" alt="Gallery Image 4">
+										</div>
+										<button class="gallery-button right" onclick="scrollGallery(1)">&#10095;</button>
+									</div>
+								</section>
+							</div>
+						</div>
+					
+						<script>
+							let scrollPosition = 0;
+							const scrollAmount = 300; // Adjust scroll step size
+					
+							function scrollGallery(direction) {
+								const gallery = document.getElementById("imageGallery");
+								scrollPosition += direction * scrollAmount;
+								gallery.style.transform = `translateX(${scrollPosition}px)`;
+							}
+						</script>
 				<!-- Main -->
 					<div id="main">
 
@@ -94,7 +157,7 @@
     </header>
     <div class="content">
         <div class="involvement-section">
-            <h3>Service & Civic Engagment Manager of the Ramshorn Scholars Program</h3>
+            <h3>Service & Civic Engagement Manager of the Ramshorn Scholars Program</h3>
             <p>I manage a team of 8 other students and coordinate events to serve over 170 students.</p>
         </div>
         <div class="involvement-section">
@@ -188,7 +251,7 @@
 								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Aethyr. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
