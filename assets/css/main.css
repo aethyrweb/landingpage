@@ -119,58 +119,16 @@ input, select, textarea {
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
-    z-index: 1000;
-}
-
-/* Remove default bullet points */
-.nav-tree {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-tree li {
-    padding: 5px 0;
-}
-
-/* Sidebar Links */
-.nav-tree a {
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    padding: 10px;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.nav-tree a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Sub-menu (Initially Hidden) */
-.sub-menu {
-    list-style: none;
-    padding-left: 15px;
-    display: none;
-}
-
-/* Sub-menu Links */
-.sub-menu a {
-    font-size: 16px;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    margin-left: 10px;
+    z-index: 9999; /* 👈 Ensures it's always on top */
 }
 
 /* Shift Main Content Right */
 #wrapper {
     margin-left: 270px; /* Push content to the right */
     transition: margin-left 0.3s ease-in-out;
+    position: relative;
+    z-index: 1; /* 👈 Keeps content below sidebar */
 }
-
 
 
 /* Universal Hover Effect */
