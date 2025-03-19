@@ -34,8 +34,10 @@
 }
 
 .gallery img {
-    width: 250px; /* Ensures images are exactly 250px wide */
-    height: auto; /* Maintains aspect ratio */
+    width: 250px; /* Ensures consistent width */
+    height: auto; /* Prevents distortion */
+    flex-shrink: 0; /* Prevents images from being squished */
+    object-fit: contain; /* Ensures full image is visible */
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 5px;
