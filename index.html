@@ -12,21 +12,35 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			.gallery-container {
-				position: relative;
-				max-width: 80%;
-				margin: auto;
-				overflow: hidden;
-			}
-			.gallery {
-				display: flex;
-				transition: transform 0.5s ease-in-out;
-				white-space: nowrap;
-			}
-			.gallery img {
-    		max-width: 200px; /* Forces images to be a maximum of 50px wide */
-    		height: auto; /* Maintains the aspect ratio */
-    		object-fit: contain; /* Ensures images don't get distorted */
+.gallery-container {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 15px;
+    border-radius: 10px; /* Soft rounded edges */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; /* Adds space between images */
+    padding: 10px;
+}
+
+.gallery img {
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Light border around images */
+    border-radius: 8px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05); /* Slightly visible background */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 			
 			.gallery-button {
