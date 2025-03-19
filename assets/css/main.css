@@ -107,6 +107,16 @@ input, select, textarea {
     transition: all 0.3s ease-in-out;
 }
 
+/* Universal Hover Effect */
+.hover-effect {
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle glow */
+}
+
 .nav-button:hover {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.3);
