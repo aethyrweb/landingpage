@@ -103,6 +103,73 @@ input, select, textarea {
 
 /* JavaScript-controlled Parallax Effect */
 
+/* Sidebar Navigation - Fixed on Left */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism Effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: width 0.3s ease-in-out;
+    overflow-y: auto; /* Allows scrolling inside the sidebar */
+}
+
+/* Remove bullet points */
+.nav-tree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tree li {
+    padding: 5px 0;
+}
+
+/* Main Links */
+.nav-tree a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-tree a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sub-menu (Initially Hidden) */
+.sub-menu {
+    list-style: none;
+    padding-left: 15px;
+    display: none; /* Hidden by default */
+}
+
+/* Sub-menu Links */
+.sub-menu a {
+    font-size: 16px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-left: 10px; /* Indent sub-menu items */
+}
+
+/* Make Main Content Fit Next to Sidebar */
+#main-content {
+    margin-left: 280px; /* Push content to the right */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
 .nav-button {
     transition: all 0.3s ease-in-out;
 }
