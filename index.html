@@ -71,7 +71,7 @@
 
 	<script>
 		window.addEventListener("scroll", function() {
-			let parallax = document.querySelector(".parallax::before");
+			let parallax = document.querySelector(".parallax"); // Selects the section itself
 			let scrollPosition = window.scrollY;
 			parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
 		});
@@ -111,7 +111,8 @@
 
     <!-- Parallax Section (Background) -->
     <section class="parallax">
-        <h1>Welcome!</h1>
+        <h1>Welcome to my website!</h1>
+		<p> My name is Aethyr Villela. I made this as a personal project to showcase my work and have a living portfolio of what I do as an engineering student.</p>
     </section>
 
     <!-- Header -->
@@ -303,9 +304,9 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				window.addEventListener("scroll", function() {
-					let parallax = document.querySelector(".parallax::before");
+					let parallax = document.querySelector(".parallax");
 					let scrollPosition = window.scrollY;
-					parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+					parallax.style.backgroundPositionY = `${scrollPosition * 0.3}px`; 
 				});
 			</script>
 	</body>
