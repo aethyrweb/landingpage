@@ -13,15 +13,17 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 .gallery-container {
-    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    position: relative; /* Ensures buttons are positioned inside */
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
-    border-radius: 10px; /* Soft rounded edges */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 80%;
     margin: auto;
+    overflow: hidden; /* Prevents extra scroll */
 }
 
 .gallery {
