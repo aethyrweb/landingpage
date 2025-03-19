@@ -74,6 +74,35 @@ input, select, textarea {
 
 /* Basic */
 
+.parallax {
+	position: relative; /* Ensures content stays positioned properly */
+	height: 100vh; /* Full viewport height */
+	background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white; /* Ensures text is readable */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text glow */
+	font-size: 2em;
+ } 
+
+
+
+.parallax::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 130%; /* Extends the background for the scrolling effect */
+	background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
+	z-index: -1;
+	transform: translateY(0px);
+	transition: transform 0.1s linear;
+}
+
+/* JavaScript-controlled Parallax Effect */
+
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -3717,39 +3746,6 @@ input, select, textarea {
 			border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
 		}
 
-		/* .parallax {
-			position: relative; /* Ensures content stays positioned properly */
-			/* height: 100vh; /* Full viewport height */
-			/*background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: white; /* Ensures text is readable */
-			/*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text glow */
-			/*font-size: 2em;
-		 } */
-
-		.parallax {
-			border: 5px solid red; /* Debug: Makes sure the section is visible */
-			height: 100vh; /* Full viewport height */
-			background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
-		}
-		
-		
-		.parallax::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 130%; /* Extends the background for the scrolling effect */
-			background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
-			z-index: -1;
-			transform: translateY(0px);
-			transition: transform 0.1s linear;
-		}
-		
-		/* JavaScript-controlled Parallax Effect */
 
 		@media screen and (max-width: 1280px) {
 
