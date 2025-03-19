@@ -3717,17 +3717,24 @@ input, select, textarea {
 			border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
 		}
 
-		.parallax {
+		/* .parallax {
 			position: relative; /* Ensures content stays positioned properly */
-			height: 100vh; /* Full viewport height */
-			background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
+			/* height: 100vh; /* Full viewport height */
+			/*background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			color: white; /* Ensures text is readable */
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text glow */
-			font-size: 2em;
+			/*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text glow */
+			/*font-size: 2em;
+		 } */
+
+		.parallax {
+			border: 5px solid red; /* Debug: Makes sure the section is visible */
+			height: 100vh; /* Full viewport height */
+			background: url('images/parallaxscrolling_backgroundimage.jpg') no-repeat center center/cover;
 		}
+		
 		
 		.parallax::before {
 			content: "";
