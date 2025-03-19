@@ -3735,7 +3735,7 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 130%; /* Extends the background for parallax effect */
-			background-image: url('images/parallaxscrolling_backgroundimage.jpg');
+			background-image: url("images/parallaxscrolling_backgroundimage.jpg"); /* <img src="images/headshot.JPG" */
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
