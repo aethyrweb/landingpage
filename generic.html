@@ -10,7 +10,7 @@
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #121212;
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
                 color: #ffffff;
                 text-align: center;
             }
@@ -22,11 +22,12 @@
                 padding: 10px 20px;
                 margin: 5px;
                 border: 2px solid #ffffff;
-                background: none;
+                background: rgba(255, 255, 255, 0.2);
                 color: #ffffff;
                 text-decoration: none;
                 font-size: 18px;
                 border-radius: 8px;
+                transition: background 0.3s ease-in-out;
             }
             .nav-button:hover {
                 background-color: #ffffff;
@@ -41,6 +42,7 @@
             .gallery img {
                 max-width: 300px;
                 border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             }
         </style>
     </head>
@@ -56,7 +58,7 @@
             
             <!-- Navigation -->
             <nav>
-                <a href="about.html" class="nav-button">About Jane</a>
+                <a href="about.html" class="nav-button">About Aethyr</a>
                 <a href="#interests" class="nav-button">Interests</a>
                 <a href="#involvement" class="nav-button">Involvement</a>
                 <a href="#projects" class="nav-button">Projects</a>
