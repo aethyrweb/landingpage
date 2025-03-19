@@ -3718,7 +3718,7 @@ input, select, textarea {
 		}
 
 		.parallax {
-			background-image: url('parallaxscrolling_backgroundimage.jpg'); /*image path*/
+			background-image: url('images/parallaxscrolling_backgroundimage.jpg'); /*url(../../images/parallaxscrolling_backgroundimage.jpg)*/
 			background-size: cover; /* Ensures the image covers the section */
 			background-attachment: fixed; /* Enables parallax effect */
 			background-position: center;
