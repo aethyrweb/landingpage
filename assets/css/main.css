@@ -103,26 +103,26 @@ input, select, textarea {
 
 /* JavaScript-controlled Parallax Effect */
 
-/* Sidebar Navigation - Fixed on Left */
+/* Sidebar - Fixed on Left */
 #sidebar {
     position: fixed;
     left: 0;
     top: 0;
     width: 250px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.15); /* Glassmorphism Effect */
+    height: 100vh; /* Full height */
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism effect */
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition: width 0.3s ease-in-out;
-    overflow-y: auto; /* Allows scrolling inside the sidebar */
+    overflow-y: auto;
+    z-index: 1000;
 }
 
-/* Remove bullet points */
+/* Remove default bullet points */
 .nav-tree {
     list-style: none;
     padding: 0;
@@ -133,7 +133,7 @@ input, select, textarea {
     padding: 5px 0;
 }
 
-/* Main Links */
+/* Sidebar Links */
 .nav-tree a {
     text-decoration: none;
     font-size: 18px;
@@ -144,6 +144,7 @@ input, select, textarea {
     transition: all 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .nav-tree a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
@@ -152,7 +153,7 @@ input, select, textarea {
 .sub-menu {
     list-style: none;
     padding-left: 15px;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 /* Sub-menu Links */
@@ -161,18 +162,16 @@ input, select, textarea {
     padding: 8px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    margin-left: 10px; /* Indent sub-menu items */
+    margin-left: 10px;
 }
 
-/* Make Main Content Fit Next to Sidebar */
-#main-content {
-    margin-left: 280px; /* Push content to the right */
-    padding: 20px;
+/* Shift Main Content Right */
+#wrapper {
+    margin-left: 270px; /* Push content to the right */
     transition: margin-left 0.3s ease-in-out;
 }
-.nav-button {
-    transition: all 0.3s ease-in-out;
-}
+
+
 
 /* Universal Hover Effect */
 .hover-effect {
