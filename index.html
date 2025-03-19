@@ -32,10 +32,12 @@
 }
 
 .gallery img {
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Light border around images */
+    width: 250px; /* Ensures images are exactly 250px wide */
+    height: auto; /* Maintains aspect ratio */
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 5px;
-    background: rgba(255, 255, 255, 0.05); /* Slightly visible background */
+    background: rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease-in-out;
 }
 
