@@ -18,21 +18,54 @@
                 margin-bottom: 20px;
             }
             .nav-button {
-                display: inline-block;
-                padding: 10px 20px;
-                margin: 5px;
-                border: 2px solid #ffffff;
-                background: rgba(255, 255, 255, 0.2);
-                color: #ffffff;
-                text-decoration: none;
-                font-size: 18px;
-                border-radius: 8px;
-                transition: background 0.3s ease-in-out;
-            }
-            .nav-button:hover {
-                background-color: #ffffff;
-                color: #121212;
-            }
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+        }
+        .nav-button:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ffffff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-entry {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            width: 45%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .timeline-entry.left {
+            left: 0;
+        }
+        .timeline-entry.right {
+            left: 55%;
+        }
+        
             .gallery {
                 display: flex;
                 flex-wrap: wrap;
@@ -83,11 +116,43 @@
                     <p>In May 2024, I interned at Crown Castle. I designed an AI/ML model to detect brain tumors.</p>
                 </section>
 
-                <!-- Involvement -->
-                <section id="involvement" class="main">
-                    <h2>Involvement</h2>
-                    <p>Content about involvement will go here.</p>
-                </section>
+<!-- Involvement Timeline -->
+<section id="involvement" class="main">
+    <h2>Involvement</h2>
+    <div class="timeline">
+        <div class="timeline-entry left">
+            <h3>Vice President of External Affairs - BMES</h3>
+            <p>Fall 2024 - Present</p>
+            <ul>
+                <li>Organized Case Competition & Career Night Panel.</li>
+                <li>Facilitated medical simulations with Dell Children’s.</li>
+            </ul>
+        </div>
+        <div class="timeline-entry right">
+            <h3>Chair, BMES Design Competition</h3>
+            <p>Spring 2024</p>
+            <ul>
+                <li>Oversaw judges, teams, and budget.</li>
+                <li>Implemented strategic advertising.</li>
+            </ul>
+        </div>
+        <div class="timeline-entry left">
+            <h3>Case Competition Organizer - BMES</h3>
+            <p>Fall 2023</p>
+            <ul>
+                <li>Coordinated finances, prompts, and criteria.</li>
+                <li>Managed judge communications.</li>
+            </ul>
+        </div>
+        <div class="timeline-entry right">
+            <h3>Participant - Medical Device Makeathon</h3>
+            <p>2023 - 2025</p>
+            <ul>
+                <li>Trained in CAD, business strategy, and regulatory affairs.</li>
+            </ul>
+        </div>
+    </div>
+</section>
                 
                 <!-- Projects -->
                 <section id="projects" class="main">
