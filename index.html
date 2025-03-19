@@ -68,6 +68,15 @@
 			}
 		</style>
 	</head>
+
+	<script>
+		window.addEventListener("scroll", function() {
+			let parallax = document.querySelector(".parallax::before");
+			let scrollPosition = window.scrollY;
+			parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+		});
+	</script>
+	
 	<body class="is-preload">
 
 <!-- Wrapper -->
