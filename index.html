@@ -291,6 +291,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				window.addEventListener("scroll", function() {
+					let parallax = document.querySelector(".parallax::before");
+					let scrollPosition = window.scrollY;
+					parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+				});
+			</script>
 	</body>
 </html>
