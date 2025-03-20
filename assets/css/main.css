@@ -124,7 +124,7 @@ input, select, textarea {
 
 /* Sidebar Text - Improve Visibility */
 #sidebar a {
-    color: white; /* 👈 Makes text stand out */
+    color: black; /* makes text stand out */
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
