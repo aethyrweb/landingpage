@@ -103,14 +103,14 @@ input, select, textarea {
 
 /* JavaScript-controlled Parallax Effect */
 
-/* Sidebar - Fixed on Left */
+/* Sidebar Styling */
 #sidebar {
     position: fixed;
     left: 0;
     top: 0;
     width: 250px;
     height: 100vh; /* Full height */
-    background: rgba(255, 255, 255, 0.15); /* Glassmorphism effect */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(200, 150, 250, 0.6)); /* 👈 Ombre effect */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
@@ -119,17 +119,25 @@ input, select, textarea {
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
-    z-index: 9999; /* 👈 Ensures it's always on top */
+    z-index: 9999;
 }
 
-/* Shift Main Content Right */
-#wrapper {
-    margin-left: 270px; /* Push content to the right */
-    transition: margin-left 0.3s ease-in-out;
-    position: relative;
-    z-index: 1; /* 👈 Keeps content below sidebar */
+/* Sidebar Text - Improve Visibility */
+#sidebar a {
+    color: white; /* 👈 Makes text stand out */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease-in-out;
 }
 
+/* Hover Effect */
+#sidebar a:hover {
+    color: yellow; /* 👈 Change color on hover */
+    text-decoration: underline;
+}
 
 /* Universal Hover Effect */
 .hover-effect {
