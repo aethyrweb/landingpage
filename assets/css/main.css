@@ -1,22 +1,18 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
-/* Sidebar Styling */
 #sidebar {
     position: fixed;
     left: -250px; /* Start hidden */
     top: 0;
     width: 250px;
     height: 100vh;
-    background: black; /* Ensures text is visible */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: auto;
+    background: black; /* Keeps text visible */
+    padding: 80px 20px 20px; /* 👈 ADDED: Extra space at the top */
+    transition: left 0.3s ease-in-out;
     z-index: 9999;
-    transition: left 0.3s ease-in-out; /* Smooth slide-in effect */
 }
+
 
 /* Sidebar Text */
 #sidebar a {
