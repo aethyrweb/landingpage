@@ -122,9 +122,34 @@ input, select, textarea {
     z-index: 9999;
 }
 
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px; /* Reduce width slightly */
+    height: 100vh; /* Full height */
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.9), rgba(80, 80, 80, 0.8)); /* Ombre effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+/* Push Main Content to the Right */
+#main {
+    margin-left: 250px; /* Shift content to the right */
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition */
+}
+
 /* Sidebar Text - Improve Visibility */
 #sidebar a {
-    color: black; /* makes text stand out */
+    color: black; /* Text visibility */
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
