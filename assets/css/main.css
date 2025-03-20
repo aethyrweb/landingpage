@@ -14,16 +14,23 @@
 }
 
 
-/* Sidebar Text */
+/* Ensure full row is clickable */
 #sidebar a {
-    color: white; /* Ensures readability */
+    display: block; /* Makes full area clickable */
+    padding: 12px 15px; /* Adds spacing */
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    font-size: 18px;
-    padding: 12px 15px; /* Adds clickable area */
-    display: block;
-    transition: color 0.3s ease-in-out;
-	cursor: pointer; /* Makes it obvious it's clickable */
+    color: white; /* Text color */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Ensure parent links behave like buttons */
+#sidebar .parent-link {
+    background: rgba(255, 255, 255, 0.1); /* Slight highlight */
+    border-radius: 5px;
+    padding: 12px 15px;
 }
 
 /* Hover Effect */
