@@ -4,43 +4,21 @@
 /* Sidebar Styling */
 #sidebar {
     position: fixed;
-    left: 0;
+    left: -250px; /* Start hidden */
     top: 0;
     width: 250px;
-    height: 100vh; /* Full height */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(200, 150, 250, 0.6)); /* 👈 Ombre effect */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    background: black; /* Ensures text is visible */
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
     z-index: 9999;
+    transition: left 0.3s ease-in-out; /* Smooth slide-in effect */
 }
 
-/* Push Main Content to the Right */
-#main {
-    margin-left: 260px; /* Sidebar width + small padding */
-    padding: 20px; /* Adds breathing room */
-    transition: margin-left 0.3s ease-in-out;
-}
-
-/* Sidebar */
-#sidebar {
-    position: fixed;
-    left: -250px; /* Start hidden */
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background: black; /* Makes text visible */
-    padding: 20px;
-    transition: left 0.3s ease-in-out; /* Slide in effect */
-    z-index: 9999;
-}
-
-/* Sidebar Text - Improve Visibility */
+/* Sidebar Text */
 #sidebar a {
     color: white; /* Ensures readability */
     font-weight: bold;
@@ -49,6 +27,12 @@
     padding: 10px 0;
     display: block;
     transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#sidebar a:hover {
+    color: yellow; /* Changes color on hover */
+    text-decoration: underline;
 }
 
 /* Sidebar Open (When Clicked) */
@@ -70,13 +54,7 @@
     z-index: 10000;
 }
 
-/* Hover Effect */
-#sidebar a:hover {
-    color: yellow; /* 👈 Changes color on hover */
-    text-decoration: underline;
-}
-
-/* Push Content Right When Sidebar Opens */
+/* Push Main Content When Sidebar Opens */
 #main {
     transition: margin-left 0.3s ease-in-out;
 }
@@ -84,7 +62,6 @@
 #sidebar.active ~ #main {
     margin-left: 250px; /* Moves content when sidebar opens */
 }
-
 
 /* Basic */
 .parallax {
