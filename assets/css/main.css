@@ -22,7 +22,8 @@
 
 /* Push Main Content to the Right */
 #main {
-    margin-left: 250px; /* Ensures sidebar doesn’t block content */
+    margin-left: 260px; /* Sidebar width + small padding */
+    padding: 20px; /* Adds breathing room */
     transition: margin-left 0.3s ease-in-out;
 }
 
