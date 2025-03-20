@@ -27,9 +27,22 @@
     transition: margin-left 0.3s ease-in-out;
 }
 
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    left: -250px; /* Start hidden */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: black; /* Makes text visible */
+    padding: 20px;
+    transition: left 0.3s ease-in-out; /* Slide in effect */
+    z-index: 9999;
+}
+
 /* Sidebar Text - Improve Visibility */
 #sidebar a {
-    color: black; /* Text stands out */
+    color: white; /* Ensures readability */
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
@@ -38,11 +51,40 @@
     transition: color 0.3s ease-in-out;
 }
 
+/* Sidebar Open (When Clicked) */
+#sidebar.active {
+    left: 0; /* Slides into view */
+}
+
+/* Hamburger Menu Button */
+#menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
 /* Hover Effect */
 #sidebar a:hover {
-    color: yellow; /* Changes color on hover */
+    color: yellow; /* 👈 Changes color on hover */
     text-decoration: underline;
 }
+
+/* Push Content Right When Sidebar Opens */
+#main {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+#sidebar.active ~ #main {
+    margin-left: 250px; /* Moves content when sidebar opens */
+}
+
 
 /* Basic */
 .parallax {
